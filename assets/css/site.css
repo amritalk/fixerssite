@@ -204,7 +204,8 @@ p { margin: 0 0 1rem; }
   background-repeat: no-repeat;
   padding: 120px 0 150px;
 }
-.hero::before { content: ''; position: absolute; inset: 0; background: rgba(255, 255, 255, 0.5); }
+/* No wash over the tool pattern — the live site showed it at full strength,
+   and the text sits on its own solid card, so nothing needs the contrast. */
 .hero .container { position: relative; }
 .hero-inner { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; }
 .hero-artwork { flex: 0 0 35%; max-width: 35%; }
