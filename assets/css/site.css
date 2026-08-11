@@ -198,7 +198,7 @@ p { margin: 0 0 1rem; }
 /* ---------- hero ---------- */
 .hero {
   position: relative;
-  background-image: url('/assets/img/hero.png');
+  background-image: url('/fixerssite/assets/img/hero.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
