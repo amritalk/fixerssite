@@ -218,6 +218,7 @@ p { margin: 0 0 1rem; }
 .hero-text { flex: 1 1 55%; max-width: 60%; background: var(--bg-color); padding: 48px; }
 .hero-title { font-size: clamp(18px, 6.67vw, 40px); }
 .hero-description { font-size: 20px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 10px; }
 @media (max-width: 992px) {
   .hero { padding: 40px 0 60px; }
   .hero-artwork, .hero-text { flex: 1 1 100%; max-width: 100%; }
