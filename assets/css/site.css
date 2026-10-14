@@ -219,6 +219,8 @@ p { margin: 0 0 1rem; }
 .hero-title { font-size: clamp(18px, 6.67vw, 40px); }
 .hero-description { font-size: 20px; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.hero-actions .btn { display: inline-flex; align-items: center; gap: 8px; padding-left: 16px; padding-right: 16px; }
+.btn-icon { flex: none; }
 @media (max-width: 992px) {
   .hero { padding: 40px 0 60px; }
   .hero-artwork, .hero-text { flex: 1 1 100%; max-width: 100%; }
