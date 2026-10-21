@@ -71,21 +71,23 @@
 
 /* ---------- speakers ---------- */
 .cx-intro { max-width: 640px; margin: 0 auto 32px; text-align: center; color: var(--text-light-color); font-size: 18px; }
-.cx-speakers { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; list-style: none; margin: 0; padding: 0; }
-.cx-speaker { display: flex; align-items: center; gap: 18px; padding: 22px; transition: transform 0.15s ease, box-shadow 0.15s ease; }
-.cx-speaker:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(0, 0, 0, 0.09); }
-.cx-avatar {
-  flex: 0 0 76px; height: 76px; border-radius: 50%;
-  display: grid; place-items: center;
-  font-family: var(--heading-font); font-size: 26px;
-  background: var(--primary-color); color: var(--text-color);
+/* Columns rather than a grid: bios vary from two lines to three paragraphs,
+   and a grid would pad every card in a row to the longest one. */
+.cx-speakers { columns: 3 300px; column-gap: 24px; list-style: none; margin: 0; padding: 0; }
+.cx-speaker { break-inside: avoid; margin-bottom: 24px; padding: 22px; }
+.cx-speaker-head { display: flex; align-items: center; gap: 16px; margin-bottom: 14px; }
+.cx-speaker-head img {
+  flex: 0 0 88px; width: 88px; height: 110px; object-fit: cover;
+  border-radius: var(--border-radius-button);
+  border-bottom: 4px solid var(--primary-color);
 }
-.cx-speaker:nth-child(4n+2) .cx-avatar { background: var(--accent-2-color); }
-.cx-speaker:nth-child(4n+3) .cx-avatar { background: var(--accent-3-color); }
-.cx-speaker:nth-child(4n+4) .cx-avatar { background: var(--cx-green); color: #fff; }
+.cx-speaker:nth-child(4n+2) .cx-speaker-head img { border-bottom-color: var(--accent-2-color); }
+.cx-speaker:nth-child(4n+3) .cx-speaker-head img { border-bottom-color: var(--accent-3-color); }
+.cx-speaker:nth-child(4n+4) .cx-speaker-head img { border-bottom-color: var(--cx-green); }
 .cx-speaker h3 { font-size: 20px; margin: 0 0 4px; }
-.cx-role { margin: 0; color: var(--text-light-color); }
-.cx-more { text-align: center; margin-top: 28px; color: var(--text-light-color); }
+.cx-role { margin: 0; color: var(--cx-green-dark); font-weight: 700; font-size: 15px; line-height: 1.4; }
+.cx-bio { font-size: 15.5px; color: var(--text-light-color); }
+.cx-bio p:last-child { margin-bottom: 0; }
 
 /* ---------- agenda ---------- */
 .cx-agenda { max-width: 720px; margin: 0 auto; list-style: none; padding: 0; position: relative; }
